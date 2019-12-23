@@ -456,6 +456,7 @@ public class Main extends javax.swing.JFrame {
             else
                 end = pos - 1;
         }
+        
         if(start > end || searchValue < array[start] || searchValue > array[end]){
             interpolationOutput.setText("Not Found");
         }
