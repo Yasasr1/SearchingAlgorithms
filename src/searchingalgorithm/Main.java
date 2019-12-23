@@ -389,14 +389,20 @@ public class Main extends javax.swing.JFrame {
         binaryTime.setText(Long.toString(totalTime));
     }
     
-    public void interpolationSearch(){
+    /*public void interpolationSearch(){
         long startTime = System.nanoTime();
         int low = 0;
         int high = array.length-1;
         int middle;
+        boolean found = false;
         
-        while(true){
+        while(low <= high && searchValue >= array[low] && searchValue <= array[high]){
             if(low == high){
+                if(array[low] == searchValue){
+                    interpolationOutput.setText("Found at Index:" + Integer.toString(low));
+                    found = true;
+                    break;
+                }
                 interpolationOutput.setText("Not Found");
                 break;
             }
@@ -405,6 +411,7 @@ public class Main extends javax.swing.JFrame {
             
             if(array[middle] == searchValue){
                 interpolationOutput.setText("Found at Index:" + Integer.toString(middle));
+                found = true;
                 break;
             }
             else{
@@ -416,9 +423,46 @@ public class Main extends javax.swing.JFrame {
                 }
             }
         }
+        if(found == false){
+            interpolationOutput.setText("Not Found");
+        }
         long endTime   = System.nanoTime();
         long totalTime = endTime - startTime;
         interpolationTime.setText(Long.toString(totalTime));
+    }*/
+    
+    public void interpolationSearch(){
+        long startTime = System.nanoTime();
+        int start = 0;
+        int end = array.length - 1;
+        int dist, valRange, indexRange,pos;
+        float fraction;
+        
+        while(start <= end && searchValue >= array[start] && searchValue <= array[end]){
+            dist = searchValue - array[start];
+            valRange = array[end] - array[start];
+            fraction = dist/valRange;
+            indexRange = end - start;
+            pos = start + ((int)fraction * indexRange);
+            
+            if(array[pos] == searchValue){
+                interpolationOutput.setText("Found at Index:" + Integer.toString(pos));
+                break;
+            }
+            
+            if(array[pos] < searchValue){
+                start = pos + 1;
+            }
+            else
+                end = pos - 1;
+        }
+        if(start > end || searchValue < array[start] || searchValue > array[end]){
+            interpolationOutput.setText("Not Found");
+        }
+        long endTime   = System.nanoTime();
+        long totalTime = endTime - startTime;
+        interpolationTime.setText(Long.toString(totalTime));
+        
     }
     
     public static void main(String args[]) {
