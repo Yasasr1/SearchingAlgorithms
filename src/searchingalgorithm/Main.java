@@ -47,9 +47,9 @@ public class Main extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         sequentialTime = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
+        binaryTime = new javax.swing.JTextField();
+        jumpTime = new javax.swing.JTextField();
+        interpolationTime = new javax.swing.JTextField();
         jSeparator2 = new javax.swing.JSeparator();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -57,9 +57,9 @@ public class Main extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         sequentialOutput = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
+        binaryOutput = new javax.swing.JTextField();
+        jumpOutput = new javax.swing.JTextField();
+        interpolationOutput = new javax.swing.JTextField();
 
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
         jFrame1.getContentPane().setLayout(jFrame1Layout);
@@ -144,15 +144,15 @@ public class Main extends javax.swing.JFrame {
                 .addGap(85, 85, 85)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
-                    .addComponent(jTextField3))
+                    .addComponent(binaryTime))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)
-                    .addComponent(jTextField4))
+                    .addComponent(jumpTime))
                 .addGap(78, 78, 78)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(interpolationTime, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(49, 49, 49))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
@@ -170,8 +170,7 @@ public class Main extends javax.swing.JFrame {
                                 .addGap(62, 62, 62)
                                 .addComponent(input, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(44, 44, 44)
-                                .addComponent(searchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(searchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(276, 276, 276)
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -188,11 +187,11 @@ public class Main extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(sequentialOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(31, 31, 31)
-                                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(binaryOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(40, 40, 40)
-                                .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jumpOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(interpolationOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(84, 84, 84)
@@ -202,6 +201,10 @@ public class Main extends javax.swing.JFrame {
                                 .addGap(37, 37, 37)
                                 .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(51, 51, 51))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(297, 297, 297))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -228,9 +231,9 @@ public class Main extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(sequentialOutput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(binaryOutput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jumpOutput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(interpolationOutput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -244,9 +247,9 @@ public class Main extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(sequentialTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(binaryTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jumpTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(interpolationTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(20, 20, 20))
         );
 
@@ -279,6 +282,9 @@ public class Main extends javax.swing.JFrame {
         try {
            searchValue = Integer.parseInt(input.getText());
            sequentialSearch();
+           jumpSearch();
+           binarySearch();
+           interpolationSearch();
            
         }
         catch(NumberFormatException e){
@@ -293,7 +299,7 @@ public class Main extends javax.swing.JFrame {
     
     public void generateSortedArray(){
         int min = 1;
-        int max = 50000;
+        int max = 500000;
         int range = max - min + 1;
         for(int i=0; i<array.length; i++){
             array[i] = (int)(Math.random() * range) + min;
@@ -317,6 +323,102 @@ public class Main extends javax.swing.JFrame {
         long endTime   = System.nanoTime();
         long totalTime = endTime - startTime;
         sequentialTime.setText(Long.toString(totalTime));
+    }
+    
+    public void jumpSearch(){
+        long startTime = System.nanoTime();
+        int n = array.length;
+        int blockSize = (int)Math.floor(Math.sqrt(n));
+        int start = 0;
+        int end = blockSize;
+        while(end < n && array[end] <= searchValue){
+            start = end;
+            end = end + blockSize;
+            if(end > n-1){
+                end = n;
+                
+            }
+        }
+        
+        for(int i=start; i<end; i++){
+            if(array[i] == searchValue){
+                jumpOutput.setText("Found at index :" + Integer.toString(i));
+                break;
+            }
+            if(i == end-1){
+                jumpOutput.setText("Not found");
+            }
+        }
+        long endTime   = System.nanoTime();
+        long totalTime = endTime - startTime;
+        jumpTime.setText(Long.toString(totalTime));
+    }
+    
+    public void binarySearch(){
+        long startTime = System.nanoTime();
+        int n = array.length;
+        int lowerBound = 0;
+        int upperBound = n;
+        int midPoint;
+        boolean found = false;
+        
+        while(found == false){
+            if(upperBound < lowerBound){
+                binaryOutput.setText("Not Found");
+                break;
+            }
+            
+            midPoint = lowerBound + ( upperBound - lowerBound ) / 2;
+            
+            if(array[midPoint] < searchValue){
+                lowerBound = midPoint + 1;
+            }
+            
+            if(array[midPoint] > searchValue){
+                upperBound = midPoint - 1;
+            }
+            
+            if(array[midPoint] == searchValue){
+                binaryOutput.setText("Found at index :" + Integer.toString(midPoint));
+                found = true;
+            }
+            
+        }
+        long endTime   = System.nanoTime();
+        long totalTime = endTime - startTime;
+        binaryTime.setText(Long.toString(totalTime));
+    }
+    
+    public void interpolationSearch(){
+        long startTime = System.nanoTime();
+        int low = 0;
+        int high = array.length-1;
+        int middle;
+        
+        while(true){
+            if(low == high){
+                interpolationOutput.setText("Not Found");
+                break;
+            }
+            
+            middle = low + ((high-low) / (array[high] - array[low])) * (searchValue - array[low]);
+            
+            if(array[middle] == searchValue){
+                interpolationOutput.setText("Found at Index:" + Integer.toString(middle));
+                break;
+            }
+            else{
+                if(array[middle] < searchValue){
+                    low = middle + 1;
+                }
+                else if(array[middle] > searchValue){
+                    high = middle - 1;
+                }
+            }
+        }
+        long endTime   = System.nanoTime();
+        long totalTime = endTime - startTime;
+        interpolationTime.setText(Long.toString(totalTime));
     }
     
     public static void main(String args[]) {
@@ -352,9 +454,13 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField binaryOutput;
+    private javax.swing.JTextField binaryTime;
     private javax.swing.JTextArea displayArray;
     private javax.swing.JButton generateButton;
     private javax.swing.JTextField input;
+    private javax.swing.JTextField interpolationOutput;
+    private javax.swing.JTextField interpolationTime;
     private javax.swing.JFrame jFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -371,12 +477,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jumpOutput;
+    private javax.swing.JTextField jumpTime;
     private javax.swing.JButton searchButton;
     private javax.swing.JTextField sequentialOutput;
     private javax.swing.JTextField sequentialTime;
